@@ -9,7 +9,13 @@ export const startServer = () => {
 		const app = express();
 		const server = createHttpServer(app);
 		app.use(helmet());
-		app.use(cors());
+		app.use(
+			cors({
+				origin: [
+					'https://chat-gtd7ngeqg-sarangkulkarni99s-projects.vercel.app/',
+				],
+			})
+		);
 		app.use(json());
 
 		socketHandler(server);

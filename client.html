@@ -72,7 +72,9 @@
 			const messageInput = document.getElementById('messageInput');
 			const sendButton = document.getElementById('sendButton');
 
-			const socket = new WebSocket('ws://localhost:3000');
+			const socket = new WebSocket(
+				'ws://chat-gtd7ngeqg-sarangkulkarni99s-projects.vercel.app/'
+			);
 
 			socket.onmessage = (event) => {
 				const message = event.data;
