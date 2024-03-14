@@ -10,13 +10,8 @@ export const socketHandler = (server: HttpServer) => {
 	const wss = new WebSocket.Server({ server });
 
 	// Event listener for new WebSocket connections
-	wss.on('connection', (ws: WebSocket, req) => {
-		const origin = req.headers.origin;
-		if (origin === 'https://chat-app-inky-kappa.vercel.app/') {
-			console.log('Client connected!');
-		} else {
-			ws.close();
-		}
+	wss.on('connection', (ws: WebSocket) => {
+		console.log('Client connected!');
 
 		// Add the new client to the clients array
 		clients.push(ws);

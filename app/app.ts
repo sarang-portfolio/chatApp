@@ -9,11 +9,7 @@ export const startServer = () => {
 		const app = express();
 		const server = createHttpServer(app);
 		app.use(helmet());
-		app.use(
-			cors({
-				origin: 'https://chat-app-inky-kappa.vercel.app/',
-			})
-		);
+		app.use(cors());
 		app.use(json());
 
 		socketHandler(server);
