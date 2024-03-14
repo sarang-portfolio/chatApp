@@ -11,9 +11,7 @@ export const startServer = () => {
 		app.use(helmet());
 		app.use(
 			cors({
-				origin: [
-					'https://chat-gtd7ngeqg-sarangkulkarni99s-projects.vercel.app/',
-				],
+				origin: ['https://chat-app-inky-kappa.vercel.app/'],
 			})
 		);
 		app.use(json());

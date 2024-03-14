@@ -12,7 +12,7 @@ export const socketHandler = (server: HttpServer) => {
 	// Event listener for new WebSocket connections
 	wss.on('connection', (ws: WebSocket, req) => {
 		const origin = req.headers.origin;
-		if (origin === 'chat-gtd7ngeqg-sarangkulkarni99s-projects.vercel.app/') {
+		if (origin === 'https://chat-app-inky-kappa.vercel.app/') {
 			console.log('Client connected!');
 		} else {
 			ws.close();
