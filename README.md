@@ -19,14 +19,6 @@
 
 6. The WebSocket server will start running on port 3000.
 
-**Running the Client:**
-
-1. Open the chatApp directory in your code editor.
-
-2. Open `client.html` in your web browser or serve it using a local server. Open multiple instances of the page for real time 2-way communication between multiple clients.
-
-3. The client interface will be accessible in your web browser, allowing you to connect to the WebSocket server and interact with the chat application.
-
 ---
 
 ## Architecture and Concurrency
@@ -41,7 +33,7 @@ The application consists of a WebSocket server built with Node.js, express.js, t
 
 **Client-Side:**
 
-- The client is a single HTML file (`client.html`) that includes JavaScript code to establish a WebSocket connection with the server and handle chat interactions.
+- The client is a single HTML file (`index.html`) [Client Repo](https://github.com/sarang-portfolio/sarang-portfolio.github.io/tree/main) that includes JavaScript code to establish a WebSocket connection with the server and handle chat interactions.
 - Concurrency on the client-side is managed by the browser's event loop, allowing for real-time communication with the WebSocket server without blocking the user interface.
 
 ---
