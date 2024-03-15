@@ -54,8 +54,7 @@ The application consists of a WebSocket server built with Node.js, express.js, t
 
 1. The backend server is deployed on Render on a free tier server instance which supports webSocket protocol. The reason for choosing this cloud service is that it allows a shared instance rather than a serverless architecture as websockets are not meant to function on serverless architecture.
 
-2. Backend Deployement Link - [Render link](https://chatapp-1ich.onrender.com) One can check do the health check by hitting the route
-   `/checkHealthStatus` [Health Check](https://chatapp-1ich.onrender.com/checkHealthStatus)
+2. Backend Deployement Link - [Render link](https://chatapp-1ich.onrender.com) One can check do the health check by hitting the route <br>`/checkHealthStatus` [Health Check](https://chatapp-1ich.onrender.com/checkHealthStatus)
 
 4. Client Side Deployment Link - [Github IO](https://sarang-portfolio.github.io/)
     
