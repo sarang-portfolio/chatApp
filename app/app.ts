@@ -11,7 +11,7 @@ export const startServer = () => {
 		app.use(helmet());
 		app.use(
 			cors({
-				origin: '*',
+				origin: 'https://chatapp-1ich.onrender.com',
 			})
 		);
 		app.use(json());
