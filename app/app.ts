@@ -1,5 +1,5 @@
 import cors from 'cors';
-import express, { json } from 'express';
+import express, { NextFunction, Request, Response, json } from 'express';
 import helmet from 'helmet';
 import { createServer as createHttpServer } from 'http';
 import { socketHandler } from './middlewares/socket.middleware';
@@ -9,10 +9,25 @@ export const startServer = () => {
 		const app = express();
 		const server = createHttpServer(app);
 		app.use(helmet());
-		app.use(cors());
+		app.use(
+			cors({
+				origin: '*',
+			})
+		);
 		app.use(json());
 
 		socketHandler(server);
+
+		app.get(
+			'/checkHealthStatus',
+			(req: Request, res: Response, next: NextFunction) => {
+				try {
+					res.send('HEALTH CHECK SUCCESSFULL!');
+				} catch (error) {
+					console.error(error);
+				}
+			}
+		);
 
 		const { PORT } = process.env;
 		server.listen(PORT, () => {

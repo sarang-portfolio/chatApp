@@ -72,7 +72,7 @@
 			const messageInput = document.getElementById('messageInput');
 			const sendButton = document.getElementById('sendButton');
 
-			const socket = new WebSocket('ws://localhost:3000');
+			const socket = new WebSocket('ws://chatapp-1ich.onrender.com');
 
 			socket.onmessage = (event) => {
 				const message = event.data;
